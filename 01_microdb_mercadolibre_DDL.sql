@@ -104,7 +104,8 @@ unique(id);
 alter table users_details 
 add constraint FK_users_details_user_id
 foreign key(user_id)
-references users(id);
+references users(id)
+ON DELETE CASCADE;
 
 -- UNIQUE PHONE_USER
 alter table users_details 
@@ -150,7 +151,8 @@ unique(id);
 alter table users_addresses 
 add constraint FK_users_addresses_user_id
 foreign key(user_id)
-references users(id);
+references users(id)
+ON DELETE CASCADE;
 
 -- CHECK UPDATE_DATE
 alter table users_addresses 
@@ -194,7 +196,8 @@ unique(id);
 alter table users_addresses_details 
 add constraint FK_users_address_details_user_address_id
 foreign key(user_address_id)
-references user_addresses(id);
+references users_addresses(id)
+ON DELETE CASCADE;
 
 
 -- CHECK UPDATE_DATE
