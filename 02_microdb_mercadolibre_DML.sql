@@ -16,8 +16,11 @@ use microdb_mercadolibre;
 delete from users;
 delete from users_details;
 delete from users_addresses;
+<<<<<<< HEAD
 delete from users_addresses_details;
 delete from sellers;
+=======
+>>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 -- delete from products;
 -- delete from products_details;
 
@@ -54,6 +57,7 @@ insert into users_details (id, user_id, contact, phone
 (1, 1, 'Guatemala 5100', '1', 'C22', '5100', 'Guatemala', '1200'
 , 'TUxBQlBBTDI1MTVa', 'Palermo', now(), now()),
 (2, 2, 'Av. San martin 12090', null, null, '12090', 'Av. San Martin', '2231' 
+<<<<<<< HEAD
 ,'UWHAH9asnqKKSLAA', 'Los palos', now(), now()),
 (3, 3, '691 Gelly y Obes', '5', '5B', '691', 'Gelly y Obes', '356' 
 ,'OOWA78SKLANNSAQQ', 'Bella Vista', now(), now());
@@ -69,5 +73,19 @@ insert into users_addresses_details (id, user_address_id, state_id
 , '-22.7271822', '-82.9992112' , now(), now()),
 (3, 3, 'AR-B', 'Buenos Aires','AR', 'Argentina', 'AAP', 'Bella Vista'
 , '-34.5551979', '-58.7088356' , now(), now()),;
+=======
+,'UWHAH9asnqKKSLAA', 'Nuñez', now(), now()),
+(3, 3, 'Los andes 356', '5', '5B', '356', 'Los andes', '356' 
+,'OOWA78SKLANNSAQQ', 'Recoleta', now(), now());
+
+
+-- insert into users_addresses_details (id, user_address_id, state_id, state_name
+-- , country_id , country_name, neighborhood_id, neighborhood_name
+-- , municipality_id, municipality_name, geolocation_type , latitude
+-- , longitude, creation_date, update_date) values
+-- (1, 1, 'TUxBQlBBTDI1MTVa', 'Palermo','TUxBQlBBTDI1MTVa', 'Palermo', now(), now()),
+-- 
+-- ;
+>>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 
 
