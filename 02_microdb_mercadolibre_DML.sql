@@ -53,8 +53,7 @@ insert into users_details (id, user_id, contact, phone
  , update_date) values
 (1, 1, 'Guatemala 5100', '1', 'C22', '5100', 'Guatemala', '1200'
 , 'TUxBQlBBTDI1MTVa', 'Palermo', now(), now()),
-(2, 2, 'Av. San martin 12090', null, null, '12090', 'Av. San Martin', '2231' 
-<<<<<<< HEAD
+(2, 2, 'Av. San martin 12090', null, null, '12090', 'Av. San Martin', '2231'
 ,'UWHAH9asnqKKSLAA', 'Los palos', now(), now()),
 (3, 3, '691 Gelly y Obes', '5', '5B', '691', 'Gelly y Obes', '356' 
 ,'OOWA78SKLANNSAQQ', 'Bella Vista', now(), now());
