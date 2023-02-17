@@ -81,8 +81,5 @@ insert into sellers (id, user_id, status_billing_allow, status_buy_allow
 (3, 3, 1, 1, 1, "business", 1, "active", "allowed", "allowed", 0
 , "accepted", now(), now());
 
-select * from sellers;
-
-
 
 
