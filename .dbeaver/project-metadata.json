@@ -1,1 +1,1 @@
-{"resources":{"01_microdb_mercadolibre_DDL.sql":{"default-datasource":"mysql8-1865c740183-700e245628a80dc9","default-catalog":"microdb_mercadolibre"},"02_microdb_mercadolibre_DML.sql":{"default-datasource":"mysql8-1865c740183-700e245628a80dc9","default-catalog":"microdb_mercadolibre"}}}
+{"resources":{"01_microdb_mercadolibre_DDL.sql":{"default-datasource":"mysql8-1865c740183-700e245628a80dc9","default-catalog":"microdb_mercadolibre"},"Scripts/Script.sql":{"default-datasource":"mysql8-1865c740183-700e245628a80dc9","default-catalog":"mysql"}}}

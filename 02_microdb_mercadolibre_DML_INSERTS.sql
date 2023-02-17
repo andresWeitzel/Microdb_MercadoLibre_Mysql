@@ -4,7 +4,7 @@
  * -------------------------------------
  * 
  * 
- * ========= DML =============
+ * ========= DML INSERTS=============
  */
 
 
@@ -74,9 +74,14 @@ insert into sellers (id, user_id, status_billing_allow, status_buy_allow
 , status_sell_action_allow, mercadopago_account_type, mercadopago_tc_accepted
 , site_status, shopping_cart_buy, shopping_cart_sell, inmediate_payment
 , mercado_envios, creation_date, update_date) values
-(1, 1, 1, 1, 1, "personal", 1, "active", "allowed", "allowed", 0
-,"not_accepted", now(), now());
+(1, 1, 1, 0, 1, "personal", 1, "active", "allowed", "allowed", 0
+,"accepted", now(), now()),
+(2, 2, 0, 1, 0, "personal", 1, "inactive", "not_allowed", "now_allowed", 1
+,"not_accepted", now(), now()),
+(3, 3, 1, 1, 1, "business", 1, "active", "allowed", "allowed", 0
+, "accepted", now(), now());
 
+select * from sellers;
 
 
 
