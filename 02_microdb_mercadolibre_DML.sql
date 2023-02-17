@@ -16,11 +16,8 @@ use microdb_mercadolibre;
 delete from users;
 delete from users_details;
 delete from users_addresses;
-<<<<<<< HEAD
 delete from users_addresses_details;
 delete from sellers;
-=======
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 -- delete from products;
 -- delete from products_details;
 
@@ -72,20 +69,4 @@ insert into users_addresses_details (id, user_address_id, state_id
 (2, 2, 'AR-W', 'Corrientes','AR', 'Argentina', 'KAL', 'Los Palos'
 , '-22.7271822', '-82.9992112' , now(), now()),
 (3, 3, 'AR-B', 'Buenos Aires','AR', 'Argentina', 'AAP', 'Bella Vista'
-, '-34.5551979', '-58.7088356' , now(), now()),;
-=======
-,'UWHAH9asnqKKSLAA', 'Nuñez', now(), now()),
-(3, 3, 'Los andes 356', '5', '5B', '356', 'Los andes', '356' 
-,'OOWA78SKLANNSAQQ', 'Recoleta', now(), now());
-
-
--- insert into users_addresses_details (id, user_address_id, state_id, state_name
--- , country_id , country_name, neighborhood_id, neighborhood_name
--- , municipality_id, municipality_name, geolocation_type , latitude
--- , longitude, creation_date, update_date) values
--- (1, 1, 'TUxBQlBBTDI1MTVa', 'Palermo','TUxBQlBBTDI1MTVa', 'Palermo', now(), now()),
--- 
--- ;
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
-
-
+, '-34.5551979', '-58.7088356' , now(), now());

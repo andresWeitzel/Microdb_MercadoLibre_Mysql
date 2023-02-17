@@ -22,16 +22,12 @@ drop table if exists users;
 drop table if exists users_details;
 drop table if exists users_addresses;
 drop table if exists users_addresses_details;
-<<<<<<< HEAD
+
 drop table if exists sellers;
 
 -- drop table if exists products;
 -- drop table if exists products_details;
-=======
 
-drop table if exists products;
-drop table if exists products_details;
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 
 
 
@@ -64,30 +60,18 @@ unique(id);
 
 -- UNIQUE FIRST_LASTNAME
 alter table users 
-<<<<<<< HEAD
 add constraint UNIQUE_users_first_last_name
-=======
-add constraint UNIQUE_first_last_name
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 unique(first_name, last_name);
 
 -- UNIQUE identification
 alter table users 
-<<<<<<< HEAD
 add constraint UNIQUE_users_identification
-=======
-add constraint UNIQUE_identification
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 unique(identification_type, identification_number);
 
 
 -- CHECK UPDATE_DATE
 alter table users
-<<<<<<< HEAD
 add constraint CHECK_users_update_date
-=======
-add constraint CHECK_update_date
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 check (update_date >= creation_date);
 
 -- ---------------------------------------------------------------------------
@@ -128,21 +112,13 @@ ON DELETE CASCADE;
 
 -- UNIQUE PHONE_USER
 alter table users_details 
-<<<<<<< HEAD
 add constraint UNIQUE_users_details_phone_user
-=======
-add constraint UNIQUE_phone_user
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 unique(phone, alternative_phone);
 
 
 -- CHECK UPDATE_DATE
 alter table users_details
-<<<<<<< HEAD
 add constraint CHECK_users_details_update_date
-=======
-add constraint CHECK_update_date
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 check (update_date >= creation_date);
 
 -- ---------------------------------------------------------------------------
@@ -182,12 +158,8 @@ references users(id)
 ON DELETE CASCADE;
 
 -- CHECK UPDATE_DATE
-alter table users_addresses 
-<<<<<<< HEAD
+alter table users_addresses
 add constraint CHECK_users_addresses_update_date
-=======
-add constraint CHECK_update_date
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
 check (update_date >= creation_date);
 
 
@@ -233,7 +205,6 @@ ON DELETE CASCADE;
 
 -- CHECK UPDATE_DATE
 alter table users_addresses_details
-<<<<<<< HEAD
 add constraint CHECK_users_addresses_details_update_date
 check (update_date >= creation_date);
 
@@ -281,11 +252,4 @@ alter table sellers
 add constraint CHECK_sellers_update_date
 check (update_date >= creation_date);
 
--- ---------------------------------------------------------------------------
-=======
-add constraint CHECK_update_date
-check (update_date >= creation_date);
 
--- ---------------------------------------------------------------------------
-
->>>>>>> 5918cb33a762a2837252c1f0a4a29a3dc14dacd8
