@@ -63,9 +63,21 @@ insert into users_addresses_details (id, user_address_id, state_id
 , state_name, country_id , country_name, neighborhood_id, neighborhood_name
 , municipality_id, municipality_name, geolocation_type , latitude
 , longitude, creation_date, update_date) values
-(1, 1, 'AR-C', 'Capital Federal','AR', 'Argentina', 'DFL', 'Floresta'
-, '-34.6423233', '-58.4788987' , now(), now()),
-(2, 2, 'AR-W', 'Corrientes','AR', 'Argentina', 'KAL', 'Los Palos'
-, '-22.7271822', '-82.9992112' , now(), now()),
-(3, 3, 'AR-B', 'Buenos Aires','AR', 'Argentina', 'AAP', 'Bella Vista'
-, '-34.5551979', '-58.7088356' , now(), now());
+(1, 1, 'AR-C', 'Capital Federal','AR', 'Argentina', 'DFL', 'Floresta', null, null
+, "RANGE_INTERPOLATED" , '-34.6423233', '-58.4788987' , now(), now()),
+(2, 2, 'AR-W', 'Corrientes','AR', 'Argentina', 'KAL', 'Los Palos', null, null
+, "RANGE_INTERPOLATED" , '-22.7271822', '-82.9992112' , now(), now()),
+(3, 3, 'AR-B', 'Buenos Aires','AR', 'Argentina', 'AAP', 'Bella Vista', null, null
+, "RANGE_INTERPOLATED" , '-34.5551979', '-58.7088356' , now(), now());
+
+insert into sellers (id, user_id, status_billing_allow, status_buy_allow
+, status_sell_action_allow, mercadopago_account_type, mercadopago_tc_accepted
+, site_status, shopping_cart_buy, shopping_cart_sell, inmediate_payment
+, mercado_envios, creation_date, update_date) values
+(1, 1, 1, 1, 1, "personal", 1, "active", "allowed", "allowed", 0
+,"not_accepted", now(), now());
+
+
+
+
+

@@ -222,7 +222,7 @@ mercadopago_tc_accepted varchar(50) default null,
 site_status varchar(50) default null,
 shopping_cart_buy varchar(50) default null,
 shopping_cart_sell varchar(50) default null,
-immediate_payment varchar(50) default null,
+inmediate_payment varchar(50) default null,
 mercado_envios varchar(50) default null,
 creation_date datetime not null,
 update_date datetime not NULL
