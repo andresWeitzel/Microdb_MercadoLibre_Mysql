@@ -6,12 +6,12 @@
 			"driver": "mysql8",
 			"name": "mysql",
 			"save-password": true,
-			"read-only": false,
 			"configuration": {
 				"host": "localhost",
 				"port": "3306",
 				"database": "mysql",
 				"url": "jdbc:mysql://localhost:3306/mysql",
+				"configurationType": "MANUAL",
 				"home": "C:\\Program Files\\MySQL\\MySQL Router 8.0",
 				"type": "dev",
 				"properties": {
@@ -19,8 +19,7 @@
 					"rewriteBatchedStatements": "true",
 					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2"
 				},
-				"auth-model": "native",
-				"handlers": {}
+				"auth-model": "native"
 			}
 		}
 	},

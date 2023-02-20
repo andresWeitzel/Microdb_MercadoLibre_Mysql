@@ -17,7 +17,7 @@ delete from users;
 delete from users_details;
 delete from users_addresses;
 delete from users_addresses_details;
-delete from sellers;
+-- delete from sellers;
 -- delete from products;
 -- delete from products_details;
 
@@ -28,8 +28,13 @@ insert into users (id, nickname, first_name, last_name, email, identification_ty
 (3, 'HECTOR SS G', 'Hector', 'Gomez', 'hectorGomez78@gmail.com',  'DNI', '2172265827' ,  'AR',  now(), now() ),
 (4, 'GABRIELA JIMENEZ' ,'Gabriela', 'Jimenez', 'gabriela.consultas@hotmail.com' , 'DNI', '410871223' , 'AR',  now(), now()),
 (5, 'GUSTA G K' ,'Gustavo', 'Gomez', 'gustavo_andaluz@gmail.com', 'PASAPORTE', '748000221' , 'AR',  now(), now()),
-(6, 'Jose Perez' ,'Jose', 'Perez', 'jose_consultasInternas@hotmail.com', 'DNI', '22287680' , 'AR',  now(), now());
-
+(6, 'JOSE_PEREZ' ,'Jose', 'Perez', 'jose_consultasInternas@hotmail.com', 'DNI', '22287680' , 'AR',  now(), now()),
+(7, 'JULI54' ,'Julieta', 'Bustos', 'julietaBustos@outlook.com', 'DNI', '3456271812' , 'AR',  now(), now()),
+(8, 'RAMÓN2022' ,'Ramon', 'Castro', 'ramoncnc2022@gmail.com', 'DNI', '2271617711' , 'AR',  now(), now()),
+(9, 'LUIS_MATERA' ,'Luis', 'Matera', 'luis_jose_matera_91@hotmail.com', 'DNI', '252441112' , 'AR',  now(), now()),
+(10, 'CARLOS MARTINEZ' ,'Carlos', 'Martinez', 'carlos_etec_martinez@gmail.com', 'DNI', '2718181112' , 'AR',  now(), now()),
+(11, 'SOFIA PAZ' ,'Sofia', 'Paz', 'sofi.paz.107@hotmail.com', 'DNI', '2617223234' , 'AR',  now(), now()),
+(12, 'ELENA FUKZEK' ,'Elena', 'Fukzek', 'elenaFukzekLikert@gmail.com', 'PASAPORTE', '34522122' , 'AR',  now(), now());
 
 insert into users_details (id, user_id, contact, phone
 , alternative_phone, user_type, points, site_id, permalink
@@ -80,6 +85,4 @@ insert into sellers (id, user_id, status_billing_allow, status_buy_allow
 ,"not_accepted", now(), now()),
 (3, 3, 1, 1, 1, "business", 1, "active", "allowed", "allowed", 0
 , "accepted", now(), now());
-
-
 

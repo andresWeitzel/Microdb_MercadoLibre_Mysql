@@ -19,9 +19,7 @@ drop table if exists users;
 drop table if exists users_details;
 drop table if exists users_addresses;
 drop table if exists users_addresses_details;
-
 drop table if exists sellers;
-
 -- drop table if exists products;
 -- drop table if exists products_details;
 
