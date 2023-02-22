@@ -20,8 +20,8 @@ drop table if exists users_details;
 drop table if exists users_addresses;
 drop table if exists users_addresses_details;
 drop table if exists sellers;
--- drop table if exists products;
--- drop table if exists products_details;
+drop table if exists products;
+drop table if exists products_details;
 
 
 
@@ -221,7 +221,7 @@ site_status varchar(50) default null,
 shopping_cart_buy varchar(50) default null,
 shopping_cart_sell varchar(50) default null,
 inmediate_payment varchar(50) default null,
-mercado_envios varchar(50) default null,
+shipping_market varchar(50) default null,
 creation_date datetime not null,
 update_date datetime not NULL
 );
@@ -238,6 +238,50 @@ alter table sellers
 add constraint FK_sellers_id
 foreign key(user_id)
 references users(id)
+ON DELETE CASCADE;
+
+
+-- CHECK UPDATE_DATE
+alter table sellers
+add constraint CHECK_sellers_update_date
+check (update_date >= creation_date);
+
+-- ---------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------
+
+-- ======= Tabla products ===========
+
+
+create table products(
+	
+id int(12) auto_increment primary key,
+site_id varchar(20) NOT NULL,
+title varchar(100) NOT NULL,
+subtitle varchar(100) default NULL,
+seller_id int(20) NOT NULL,
+category_id varchar(100) not NULL,
+official_store_id varchar(100) default NULL,
+price int(10) NOT NULL,
+base_price int(10) NOT NULL,
+original_price int(10) NOT NULL,
+initial_quantity int(10) NOT NULL,
+available_quantity int(10) NOT NULL,
+creation_date datetime not null,
+update_date datetime not NULL
+);
+
+-- ======= Restricciones Tabla sellers ===========
+
+-- UNIQUE ID
+alter table products 
+add constraint UNIQUE_products_id
+unique(id);
+
+-- FK SELLERS
+alter table products 
+add constraint FK_products_seller_id 
+foreign key(seller_id)
+references sellers(id)
 ON DELETE CASCADE;
 
 
