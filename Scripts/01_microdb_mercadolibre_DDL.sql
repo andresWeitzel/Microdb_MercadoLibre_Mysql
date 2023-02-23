@@ -291,3 +291,51 @@ add constraint CHECK_sellers_update_date
 check (update_date >= creation_date);
 
 
+
+-- ---------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------
+
+-- ======= Tabla products_details ===========
+
+
+create table products_details(
+	
+id int(12) auto_increment primary key,
+product_id int(12) NOT NULL,
+status varchar(20) NOT NULL,
+warranty varchar(20) NOT NULL,
+sold_quantity int(10) default NULL,
+buyind_mode varchar(50) DEFAULT NULL,
+listing_type_id varchar(50) DEFAULT NULL,
+product_condition varchar(50) DEFAULT NULL,
+permalink varchar(255) DEFAULT NULL,
+thumbnail_id varchar(255) DEFAULT NULL,
+thumbnail varchar(255) DEFAULT NULL,
+secure_thumbnail varchar(255) DEFAULT NULL,
+pictures_id varchar(255) DEFAULT NULL,
+pictures_url varchar(255) DEFAULT NULL,
+creation_date datetime not null,
+update_date datetime not NULL
+);
+
+-- ======= Restricciones Tabla sellers ===========
+
+-- UNIQUE ID
+alter table products_details 
+add constraint UNIQUE_products_details_id
+unique(id);
+
+-- FK PRODUCTS
+alter table products_details 
+add constraint FK_products_details_product_id 
+foreign key(product_id)
+references products(id)
+ON DELETE CASCADE;
+
+
+-- CHECK UPDATE_DATE
+alter table products_details
+add constraint CHECK_products_details_update_date
+check (update_date >= creation_date);
+
+
