@@ -17,9 +17,9 @@ delete from users;
 delete from users_details;
 delete from users_addresses;
 delete from users_addresses_details;
--- delete from sellers;
--- delete from products;
--- delete from products_details;
+delete from sellers;
+delete from products;
+delete from products_details;
 
 insert into users (id, nickname, first_name, last_name, email, identification_type
 , identification_number, country_id, creation_date, update_date) values
@@ -50,7 +50,13 @@ insert into users_details (id, user_id, contact, phone
 (5, 5, 'Gustavo', '113365514', null , 'normal', 1400, 'KSIU'
 , 'http://perfil.mercadolibre.com.ar/TEST2870025', now(), now()),
 (6, 6, 'Jose', '117464533', NULL , 'suscribed', 2200, 'LSP'
-, 'http://perfil.mercadolibre.com.ar/TEST2870026', now(), now());
+, 'http://perfil.mercadolibre.com.ar/TEST2870026', now(), now()),
+(7, 7, 'Julieta', '1162711182', NULL , 'normal', 1200, 'KAOA'
+, 'http://perfil.mercadolibre.com.ar/TEST2870027', now(), now()),
+(8, 8, 'Ramon', '11726383733', NULL , 'suscribed', 1300, 'LSP'
+, 'http://perfil.mercadolibre.com.ar/TEST2870028', now(), now()),
+(9, 9, 'Luis', '1183739444', NULL , 'suscribed', 3400, 'LSP'
+, 'http://perfil.mercadolibre.com.ar/TEST2870029', now(), now());
 
 
  insert into users_addresses (id, user_id, address_line , floor, apartment 
@@ -61,7 +67,13 @@ insert into users_details (id, user_id, contact, phone
 (2, 2, 'Av. San martin 12090', null, null, '12090', 'Av. San Martin', '2231'
 ,'UWHAH9asnqKKSLAA', 'Los palos', now(), now()),
 (3, 3, '691 Gelly y Obes', '5', '5B', '691', 'Gelly y Obes', '356' 
-,'OOWA78SKLANNSAQQ', 'Bella Vista', now(), now());
+,'OOWA78SKLANNSAQQ', 'Bella Vista', now(), now()),
+(4, 4, 'Concordia 524', null, null, '524', 'Concordia', '221' 
+,'KKSIAHHHDYDYY88Q', 'Jose c paz', now(), now()),
+(5, 5, 'Av Juan Gallardo 221', '2', '2f', '221', 'Av. Gallardo', '921' 
+,'KJAKSDHJ2212JDAS', 'Parque Centenario', now(), now()),
+(6, 6, 'Olleros 89', '12', '12H', '89', 'Olleros', '222' 
+,'YUJABS8987ASA7S7', 'Palermo', now(), now());
 
 
 insert into users_addresses_details (id, user_address_id, state_id
