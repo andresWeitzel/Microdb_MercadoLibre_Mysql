@@ -85,7 +85,13 @@ insert into users_addresses_details (id, user_address_id, state_id
 (2, 2, 'AR-W', 'Corrientes','AR', 'Argentina', 'KAL', 'Los Palos', null, null
 , "RANGE_INTERPOLATED" , '-22.7271822', '-82.9992112' , now(), now()),
 (3, 3, 'AR-B', 'Buenos Aires','AR', 'Argentina', 'AAP', 'Bella Vista', null, null
-, "RANGE_INTERPOLATED" , '-34.5551979', '-58.7088356' , now(), now());
+, "RANGE_INTERPOLATED" , '-34.5551979', '-58.7088356' , now(), now()),
+(4, 4, 'AR-H', 'Catamarca','AR', 'Argentina', 'IOP', 'Las Marz', null, null
+, "RANGE_INTERPOLATED" , '-38.55333979', '-19.74343356' , now(), now()),
+(5, 5, 'AR-C', 'Capital Federal','AR', 'Argentina', 'DFL', 'Caballito', null, null
+, "RANGE_INTERPOLATED" , '-37.2221979', '-57.33234446' , now(), now()),
+(6, 6, 'AR-W', 'Corrientes','AR', 'Argentina', 'KAL', 'Barrio concepción', null, null
+, "RANGE_INTERPOLATED" , '-20.522211', '-83.7088356' , now(), now());
 
 insert into sellers (id, user_id, status_billing_allow, status_buy_allow
 , status_sell_action_allow, mercadopago_account_type, mercadopago_tc_accepted
@@ -96,5 +102,23 @@ insert into sellers (id, user_id, status_billing_allow, status_buy_allow
 (2, 2, 0, 1, 0, "personal", 1, "inactive", "not_allowed", "now_allowed", 1
 ,"not_accepted", now(), now()),
 (3, 3, 1, 1, 1, "business", 1, "active", "allowed", "allowed", 0
+, "accepted", now(), now()),
+(4, 4, 0, 1, 1, "business", 1, "active", "allowed", "allowed", 0
+, "accepted", now(), now()),
+(5, 5, 1, 1, 1, "business", 1, "inactive", "not_allowed", "allowed", 0
+, "not_accepted", now(), now()),
+(6, 6, 1, 0, 1, "business", 1, "active", "allowed", "not_allowed", 0
 , "accepted", now(), now());
+
+
+insert into products (id, site_id, title, subtitle, seller_id, category_id
+, official_store_id, price, base_price, original_price, initial_quantity
+, available_quantity, creation_date, update_date) values
+(1, "MLA", "Zapatillas Fila - Runner Prime", null, 1, "MLA109027", null, 26000, 26000, 26000
+, 200, 180, now(), now()),
+(2, "MLA", "Zapatillas Nike - Basquet", "Basquetball Pro Edition", 1, "MLA109029", null, 34000, 38000
+, 38000 , 100, 90, now(), now()),
+(3, "HAA", "Calza Deportiva Mujer", "Talle M - Pro Sport", 2, "HAA827811", null, 15000, 18000, 18000
+, 50, 50, now(), now());
+
 
