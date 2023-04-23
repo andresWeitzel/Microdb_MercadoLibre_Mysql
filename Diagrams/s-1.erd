@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="s-1.erd">
+	<entities>
+		<data-source id="mysql8-1865c740183-700e245628a80dc9">
+			<entity id="1" name="products" fq-name="microdb_mercadolibre.products" order="0" x="987" y="18">
+				<path name="microdb_mercadolibre"/>
+			</entity>
+			<entity id="2" name="products_details" fq-name="microdb_mercadolibre.products_details" order="1" x="1030" y="417">
+				<path name="microdb_mercadolibre"/>
+			</entity>
+			<entity id="3" name="sellers" fq-name="microdb_mercadolibre.sellers" order="2" x="542" y="22">
+				<path name="microdb_mercadolibre"/>
+			</entity>
+			<entity id="4" name="users" fq-name="microdb_mercadolibre.users" order="3" x="101" y="30">
+				<path name="microdb_mercadolibre"/>
+			</entity>
+			<entity id="5" name="users_addresses" fq-name="microdb_mercadolibre.users_addresses" order="4" x="360" y="431">
+				<path name="microdb_mercadolibre"/>
+			</entity>
+			<entity id="6" name="users_addresses_details" fq-name="microdb_mercadolibre.users_addresses_details" order="5" x="692" y="422">
+				<path name="microdb_mercadolibre"/>
+			</entity>
+			<entity id="7" name="users_details" fq-name="microdb_mercadolibre.users_details" order="6" x="15" y="439">
+				<path name="microdb_mercadolibre"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="FK_products_details_product_id" fq-name="microdb_mercadolibre.products_details.FK_products_details_product_id" type="fk" pk-ref="1" fk-ref="2"/>
+		<relation name="FK_products_seller_id" fq-name="microdb_mercadolibre.products.FK_products_seller_id" type="fk" pk-ref="3" fk-ref="1"/>
+		<relation name="FK_sellers_id" fq-name="microdb_mercadolibre.sellers.FK_sellers_id" type="fk" pk-ref="4" fk-ref="3"/>
+		<relation name="FK_users_addresses_user_id" fq-name="microdb_mercadolibre.users_addresses.FK_users_addresses_user_id" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="FK_users_details_user_id" fq-name="microdb_mercadolibre.users_details.FK_users_details_user_id" type="fk" pk-ref="4" fk-ref="7"/>
+		<relation name="FK_users_address_details_user_address_id" fq-name="microdb_mercadolibre.users_addresses_details.FK_users_address_details_user_address_id" type="fk" pk-ref="5" fk-ref="6"/>
+	</relations>
+</diagram>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="s.erd">
+	<entities>
+		<data-source id="mysql8-1865c740183-700e245628a80dc9">
+			<entity id="1" name="products" fq-name="microdb_mercadolibre_productos.products" order="0" x="398" y="46">
+				<path name="microdb_mercadolibre_productos"/>
+			</entity>
+			<entity id="2" name="products_details" fq-name="microdb_mercadolibre_productos.products_details" order="1" x="20" y="20">
+				<path name="microdb_mercadolibre_productos"/>
+			</entity>
+			<entity id="3" name="products_pictures" fq-name="microdb_mercadolibre_productos.products_pictures" order="2" x="796" y="55">
+				<path name="microdb_mercadolibre_productos"/>
+			</entity>
+			<entity id="4" name="products_specifications" fq-name="microdb_mercadolibre_productos.products_specifications" order="3" x="797" y="265">
+				<path name="microdb_mercadolibre_productos"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="FK_products_details_product_id" fq-name="microdb_mercadolibre_productos.products_details.FK_products_details_product_id" type="fk" pk-ref="1" fk-ref="2"/>
+		<relation name="FK_products_pictures_id" fq-name="microdb_mercadolibre_productos.products_pictures.FK_products_pictures_id" type="fk" pk-ref="1" fk-ref="3"/>
+		<relation name="FK_products_specifications_id" fq-name="microdb_mercadolibre_productos.products_specifications.FK_products_specifications_id" type="fk" pk-ref="1" fk-ref="4"/>
+	</relations>
+</diagram>
